@@ -1,0 +1,419 @@
+// New styles for the submenu - changed border-radius, left, and top values (adding this also disables the :before and :after) 
+@Color1: #262228;
+@Color2: #007849;
+@Color3: #0375B4;
+@Color4: #F9FCF5;
+@linkColor:  @Color2;
+@navbarLinkColor:                 @grayLight;
+
+
+.nav-child-sub {
+	position: absolute;
+	top: -35%;
+	left: 98%;
+	z-index: @zindexDropdown;
+	display: none; // none by default, but block on "open" of the menu
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0; // override default ul
+	list-style: none;
+	background-color: @dropdownBackground;
+	border: 1px solid #ccc; // Fallback for IE7-8
+	border: 1px solid @dropdownBorder;
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	.border-radius(0px 6px 6p 6px);
+	.box-shadow(0 5px 10px rgba(0,0,0,.2));
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+.nav-header {
+    background-color: @Color2;
+    font-size: inherit;
+    color: #fff;
+    text-shadow:none;
+}
+// maximizing front page space
+.container-fluid {
+	padding: 0px
+}
+body {
+  margin: 0;
+  padding: 0px 30px;
+  background-color: @Color4;
+}
+body.site {
+    padding-top: 0px;
+	border: none !important;
+    background-color: @Color4;
+}
+.tablefront .fabrikForm div.fabrikDataContainer .table  th,
+.tablefront .fabrikForm div.fabrikDataContainer .table  td {
+    padding: 1px 4px;
+}
+// was 100% causing scroll region
+.row-fluid {
+	width: auto;
+//	margin: 10px;
+}
+.row-fluid .span9 {
+	overflow-x: auto;
+}
+.row-fluid .span3 {
+	/* overflow: hidden; */
+/* // reduce columns when smaller need do exclude fabrik
+//     	min-width: 275px; */
+}
+// All heading stuff
+.header {
+	background-color: #2c2c2c;
+	// Gradients for modern browsers, replace as you see fit 
+	background-image: -moz-linear-gradient(top, @Color3, #222222);
+	background-image: -ms-linear-gradient(top, @Color3, #222222);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@Color3), to(#222222));
+	background-image: -webkit-linear-gradient(top, @Color3, #222222);
+	background-image: -o-linear-gradient(top, @Color3, #222222);
+	background-image: linear-gradient(top, @Color3, #222222);
+	background-repeat: repeat-x;
+	border-top: 3px solid @Color2;
+	border-bottom: 3px solid @Color2;
+//	min-height: 50px;
+}
+.navigation  {
+	padding: 0px;
+	font-size: @fontSizeLarge;
+	margin-bottom: 0px;
+	float: none;
+}
+.menu.nav-pills {
+    margin: 10px 80px 0px;
+}
+#sidebar, #content, #aside {
+	padding-top: 80px;
+}
+
+div.search form.form-inline {
+	margin: 5px 40px 0px 40px;
+ }
+#mod-search-searchword {
+	width: 100%;
+}
+.header-search{
+ 	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	z-index: 1050;
+}
+.pull-none{
+	float:none;
+}
+// --All heading stuff
+.text-center, .random-image {
+    text-align: center!important;
+}
+// Logout button
+.item-367 {
+	float: right !important
+}
+.item-367 a:hover {
+	    background-color: #04c!important;
+}
+
+.list-icons [class*="icon-"] {
+	width: 150px;
+	//display: inline-block;
+}
+.icon-lock {
+	width: auto!important;
+}
+
+.navigation .btn-navbar {
+	background: #2d2d2d;
+	box-shadow: none;
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+//@media (max-width: 480px) {
+
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media only screen and (max-width: 768px) {
+	.nav-tabs > li {
+		float: left!important; 
+	}
+	.menu.nav-pills {
+		margin: 10px 20px 0px;
+	}
+	.brand {
+		margin-left: 20px;
+	}
+	.brand img {
+		max-width: 75%
+	} 
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+
+	
+	/* Force table to not be like tables anymore */
+	.no-more-tables table, 
+	.no-more-tables thead, 
+	.no-more-tables tbody, 
+	.no-more-tables th, 
+	.no-more-tables td, 
+	.no-more-tables tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.no-more-tables thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	.no-more-tables tr { border: 1px solid #ccc; }
+ 
+	.no-more-tables td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding: 3px 8px 0px 50%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	.no-more-tables td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	.no-more-tables td:before { content: attr(data-title); }
+
+	// do not show labels of even rows, set background to white
+	.table-striped tbody > tr:nth-child(2n) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
+		background-color: #fff;
+	}
+
+}
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+	.brand img {
+		max-width: 75%
+	} 
+}
+//
+// Responsive: Large desktop and up
+// --------------------------------------------------
+//@media (min-width: 1200px) {
+
+@media (min-width: 768px) and (max-width: 979px) {
+	// Negative indent the now static "fixed" navbar
+	.navbar-fixed-top,
+	.navbar-fixed-bottom,
+	.navbar-static-top {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+	.navbar {
+		margin-bottom: 0px;
+	}
+}
+
+
+
+//@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+/* 	div.srm_position {
+		display: block;
+	}
+	ul.srm_ulmenu {
+		display: none!important;
+	}
+	.navigation  {
+		//float: left; 
+	}
+	.brand {
+		text-align:left!important;  // home img aling
+	} */
+
+	// logout button
+	.row-fluid {
+		width: auto;
+		margin: 0px;
+	}
+	.item-367 {
+		//float: none !important
+	}
+	#sidebar, #content, #aside {
+		padding-top: 0px;
+	}
+	// Negative indent the now static "fixed" navbar
+	.navbar-fixed-top,
+	.navbar-fixed-bottom,
+	.navbar-static-top {
+		margin-left: -30px;
+		margin-right: -30px;
+	} 
+	.navbar {
+		margin-bottom: 0px;
+	}
+}
+
+@media (min-width: 768px) {
+/* 	// Phocagallery and Camera Events
+	#sidebar {
+		width: 15%;
+		min-width: 240px;
+	} */
+}
+
+@media (min-width: 768px) and  (max-width: 953px) {
+// 1 column + aside
+/* 	#content.span9 {
+		width : 48%!important;
+	}
+	#content.span9 div.blog-featured div.items-row .span3 {
+		width : 95%;
+	}
+	#aside.span3 {
+		width : 48%!important;
+	}
+	#sidebar, #content, #aside {
+		padding-top: 0px;
+	} */
+}
+
+@media (min-width: 954px) and  (max-width: 1327px) {
+// 2 column + aside
+/* 	#content.span9 {
+		width : 65%!important;
+	}
+	#content.span9 div.blog-featured div.items-row .span3 {
+		width : 48%;
+	}
+	#aside.span3 {
+		width : 25%!important;
+	} */
+}
+@media (min-width: 1328px) and  (max-width: 1680px) {
+// 3 column + aside
+/* 	#content.span9 {
+		width : 70%!important;
+	}
+	#content.span9 div.blog-featured div.items-row .span3 {
+		width : 29%;
+	}
+	#aside.span3 {
+		width : 27%!important;
+	} */
+}
+// New buttons
+.btn {
+	background-image: none;
+	border-radius: 2px;
+	border:none;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	//box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+.btn-success:active,
+.btn-success.active,
+{
+  color: #ffffff;
+  background-color: #206110;
+}
+.btn-group > .btn:last-child, .btn-group > .dropdown-toggle {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.btn-group > .btn:first-child {
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.btn-info {
+ 	 background-image: none;
+}
+.navigation .nav-child {
+	border-radius: 2px;
+}
+.nav-pills > li > a {
+	border-radius: 2px;
+}
+.nav-pills .dropdown-menu {
+    border-radius: 2px;
+}
+.nav-tabs > li > span {
+    border-radius: 0px;
+}
+.nav-tabs > li > a {
+    border-radius: 0px;
+}
+
+.nav-tabs .divider {
+    background-color: #e5e5e5;
+    border-left: 1px solid #fff;
+    width: 1px;
+    overflow: hidden;
+}
+
+.moduletable_side_menu .nav-tabs > .active > a, .moduletable_side_menu .nav-tabs > .active > a:hover, .moduletable_side_menu .nav-tabs > .active > a:focus {
+//    background-color: lightblue;
+  background-color: rgba(0, 157, 228, 0.1);
+}
+
+.table th, .table td {
+    border-top: none;
+}
+.well {
+	background-color: initial;
+	border-radius: 2px;
+	margin-bottom: 3px;
+}
+.item-607 {
+    float: right !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.menu li a {
+	text-transform: uppercase;
+	/* font-family: "Dosis",sans-serif; */
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: @paginationActiveForeground;
+}
+
+.login-image {
+	float: right;
+}
+.login .form-validate.form-horizontal.well fieldset .control-group{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.js-editor-tinymce div.mce-fullscreen {
+    z-index: 1040;
+	top: 65px;
+}

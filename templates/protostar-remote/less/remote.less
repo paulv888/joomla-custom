@@ -1,0 +1,331 @@
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+@warningText:             #c09853;
+@warningBackground:       #fcf8e3;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+
+@errorText:               #b94a48;
+@errorBackground:         #f2dede;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+
+@successText:             #468847;
+@successBackground:       #dff0d8;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
+
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+
+.keysrow {
+	border-collapse:collapse;
+	height: 15px;
+}
+.keyscell {
+	height: 100%;
+	padding: 3px;
+}
+.btn-block {
+	height:100%;
+	min-height: 44px;
+}
+.table-rem-condensed th, .table-rem-condensed td {
+    padding: 2px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+.buttontext {
+//	font-size: 16px;
+}
+.rem-button.on ,.rem-button-down.on, .rem-button-up.on{
+	 background-color: hsl(60, 100%, 45%);
+	 background-repeat: repeat-x;
+	 border-color: hsl(60, 100%, 40%) hsl(60, 100%, 40%) hsl(60, 100%, 30%);
+	 color: #333;
+	 text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+	 -webkit-font-smoothing: antialiased;
+}
+
+.rem-button.on:hover ,.rem-button-down.on:hover, .rem-button-up.on:hover, 
+.rem-button.on:focus ,.rem-button-down.on:focus, .rem-button-up.on:focus, 
+.rem-button.on:active ,.rem-button-down.on:active, .rem-button-up.on:active, 
+.rem-button.on:disabled ,.rem-button-down.on:disabled, .rem-button-up.on:disabled
+{
+	 background-color: hsl(60, 100%, 40%);
+}
+
+.rem-button.off ,.rem-button-down.off, .rem-button-up.off{
+	 background-color: hsl(0, 0%, 37%);
+	 background-repeat: repeat-x;
+	 border-color: #5e5e5e #5e5e5e hsl(0, 0%, 32%);
+	 color: #fff;
+	 text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+	 -webkit-font-smoothing: antialiased;
+}
+.rem-button.off:hover ,.rem-button-down.off:hover, .rem-button-up.off:hover, 
+.rem-button.off:focus ,.rem-button-down.off:focus, .rem-button-up.off:focus, 
+.rem-button.off:active ,.rem-button-down.off:active, .rem-button-up.off:active, 
+.rem-button.off:disabled ,.rem-button-down.off:disabled, .rem-button-up.off:disabled
+{
+	background-color: hsl(0, 0%, 20%);
+}
+
+.rem-button.error, .rem-button-down.error {
+	.btn-danger;
+}
+
+.sending {
+   animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+
+.rem-button.unknown, .rem-button-down.unknown {
+	background: #f1bf8c!important;
+	color: #000;
+	background-repeat: repeat-x;
+    background-image: none;
+}
+
+.rem-button.unknown:hover {
+	background: none;
+}
+
+
+.rem-button.undefined, .rem-button-down.undefined {
+	.btn-inverse;
+}
+.rem-button.link-warning {
+	.btn-warning;
+}
+.rem-button.link-down {
+	.btn-danger;
+}
+
+.formdropdownlist, .formdropdown {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    margin: 0px;
+}
+.controlselect-button  {
+    width: 78%;
+	margin: 4px 4px 0px 0px;
+}
+.jump-button {
+    width: 18%;
+	margin-top: 3px;
+	margin-right: 3px;
+	float: right;
+}
+.controlselect{
+    width: 100%;
+	margin-top: 4px;
+}
+.table-condensed th, .table-condensed td {
+    padding: 1px 2px ;
+} 
+
+.tableheader {
+	border: 1px solid #4D90FE;
+	text-align:center; 
+	color: white;
+	background-repeat:no-repeat;
+	background-color:#4D90FE;
+	background-position:left center;
+	height: 100%;
+}
+.display {
+	background-position:left center;
+	text-align:center; 
+	height: 100%;
+	display: block;
+}
+.blockrow1 {
+    height: 405%;
+    left: -10px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.blockrow2 {
+    height: 680%;
+    left: -10px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.blockrow3 {
+    height: 900%;
+    left: -10px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.blockrow35 {
+    height: 1050%;
+    left: -10px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.blockrow4 {
+    height: 1200%;
+    left: -10px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+ 
+.field {
+	text-align:center; 
+	height: 100%;
+}
+.rem-button, .rem-button-down{
+}
+.rem-button .btn-icon, .rem-button-down .btn-icon {
+	padding-left: 3px;
+}
+
+.rem-icon-left {
+	float: left;
+}
+
+.condensed-icon {
+  font-size: 1em;
+  vertical-align: middle;
+}
+.btn-icon {
+  font-size: 1.5em;
+}
+.nav-remote  {
+	width: 100%;
+}
+.nav-remote  > li  {
+	line-height: 25px!important;
+	background-color: @Color3;
+	text-align: center;
+}
+.nav-remote  > .active > a {
+	background-color: @Color1!important;
+}
+.nav-remote  > li > a:hover {
+	background-color: @Color2!important;
+}
+.btn-icon-large {
+  font-size: 3em;
+}
+.btn-icon-small {
+  font-size: 0.75em;
+}
+.btn-icon-2em {
+  font-size: 2em;
+}
+
+.color-black      {color: #FFF;}
+.color-grayDarker {color: @grayDarker;}
+.color-grayDark  {color: @grayDark;}
+.color-gray      {color: @gray;}
+.color-grayLight {color: @grayLight;}
+.color-grayLighter {color: @grayLighter;}
+.color-white    {color: @white;}
+
+
+.color-blue      {color: @infoText;}
+.color-lightBlue      {color: #5BBFFF;}
+.color-blueDark  {color: @blueDark;}
+.color-green    {color:  @successText;}
+.color-red       {color: @errorText;}
+.color-yellow    {color: @warningText;}
+.color-orange    {color: @orange;}
+.color-pink      {color: @pink;}
+.color-purple    {color: @purple;}
+.color-black    {color: @black;}
+
+.pad10 {
+	padding-left:10px;
+}
+.icon-link:before {
+    font-weight: bold;
+}
+div#spinner
+{
+    display: none;
+    width:100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background:url(/media/com_fabrik/images/ajax-loader.gif) no-repeat center #fff;
+    text-align:center;
+    padding:10px;
+    font:normal 16px Tahoma, Geneva, sans-serif;
+    border:5px solid #D4D4D4;
+	border-radius: 15px;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index:2;
+    overflow: auto;
+}
+.group-select {
+	box-shadow: 0px 0px 3px 3px rgba(77,144,254,1);
+}
+.on .caret{
+  border-top-color: #000;
+  border-bottom-color: #000;
+}
+.dropdown-menu > li > a {
+	line-height: 28px;
+}
+[class^="icon-"], [class*=" icon-"] {
+    line-height: 1;
+    display: inline;
+} 
+.myDebugOutputTitle {
+	padding:5px;
+	background:#efefef;
+	color:#333;
+	border:1px solid #999;
+	cursor:pointer;
+    /* Standard CSS ellipsis */
+    white-space: nowrap;                   
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    width: 95vw;
+    
+    /* Beginning of string */
+    direction: rtl;
+    text-align: left;
+}
+.myDebugOutput {
+	padding:5px;background:#efefef;color:#999;
+}
+.myDebugOutput pre{
+	padding:5px;background:#efefef;color:#999;
+}
+.myDebugHidden{
+	display:none
+}

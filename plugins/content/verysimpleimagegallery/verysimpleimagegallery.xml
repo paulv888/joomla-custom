@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>Very Simple Image Gallery</name>
+	<author>Andreas Berger</author>
+	<creationDate>2013-08-15</creationDate>
+	<copyright>Copyright (C) 2013 Andreas Berger - http://www.bretteleben.de. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>andreas_berger@bretteleben.de</authorEmail>
+	<authorUrl>www.bretteleben.de</authorUrl>
+	<version>1.6.8</version>
+	<description>PLG_VSIG_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="verysimpleimagegallery">verysimpleimagegallery.php</filename>
+		<folder>files</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_verysimpleimagegallery.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_verysimpleimagegallery.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="plugins/content/verysimpleimagegallery/files/">
+			<field name="desc" type="bexml" view="intro" label="" description="" />
+
+			<field name="gallery" type="bexml" view="gallery" label="" description="" />
+			<field name="im_width" type="text" default="400" size="5" label="PLG_VSIG_GALLERY_WIDTH" description="PLG_VSIG_GALLERY_WIDTH_DESC" />
+			<field name="im_height" type="text" default="" size="5" label="PLG_VSIG_MAX_IMGHEIGHT" description="PLG_VSIG_MAX_IMGHEIGHT_DESC" />
+			<field name="im_quality" type="text" default="90" size="5" label="PLG_VSIG_IMG_QUALITY" description="PLG_VSIG_IMG_QUALITY_DESC" />
+			<field name="im_align" type="list" default="1" label="PLG_VSIG_GALLERY_ALIGN" description="PLG_VSIG_GALLERY_ALIGN_DESC">
+				<option value="2">PLG_VSIG_LEFT</option>
+				<option value="1">PLG_VSIG_CENTER</option>
+				<option value="0">PLG_VSIG_RIGHT</option>
+				<option value="3">PLG_VSIG_FLOATLEFT</option>
+				<option value="4">PLG_VSIG_FLOATRIGHT</option>
+			</field>
+
+
+			<field name="thumbs" type="bexml" view="thumbs" label="" description="" />
+			<field name="th_width" type="text" default="80" size="5" label="PLG_VSIG_THUMBWIDTH" description="PLG_VSIG_THUMBWIDTH_DESC" />
+			<field name="th_height" type="text" default="60" size="5" label="PLG_VSIG_THUMBHEIGHT" description="PLG_VSIG_THUMBHEIGHT_DESC" />
+			<field name="th_keep" type="list" default="keep" label="PLG_VSIG_CROP" description="PLG_VSIG_CROP_DESC">
+				<option value="keep">PLG_VSIG_CROP_KEEP</option>
+				<option value="crop">PLG_VSIG_CROP_CROP</option>
+			</field>
+			<field name="th_quality" type="text" default="80" size="5" label="PLG_VSIG_THUMB_QUAL" description="PLG_VSIG_THUMB_QUAL_DESC" />
+			<field name="th_space" type="text" default="3" size="5" label="PLG_VSIG_THUMB_SPACE" description="PLG_VSIG_THUMB_SPACE_DESC"/>
+			<field name="th_right" type="list" default="2" label="PLG_VSIG_THUMB_SHOW" description="PLG_VSIG_THUMB_SHOW_DESC">
+				<option value="0">PLG_VSIG_THUMB_SHOW_BELOW</option>
+				<option value="2">PLG_VSIG_THUMB_SHOW_JUST</option>
+				<option value="1">PLG_VSIG_THUMB_SHOW_RIGHT</option>
+				<option value="3">PLG_VSIG_THUMB_SHOW_LEFT</option>
+			</field>
+			<field name="th_cols" type="text" default="2" size="5" label="PLG_VSIG_THUMB_COL" description="PLG_VSIG_THUMB_COL_DESC"/>
+			<field name="th_sort" type="list" default="0" label="PLG_VSIG_SORT" description="PLG_VSIG_SORT_DESC">
+				<option value="0">PLG_VSIG_SORT_AZ</option>
+				<option value="1">PLG_VSIG_SORT_ZA</option>
+				<option value="2">PLG_VSIG_SORT_OLD</option>
+				<option value="3">PLG_VSIG_SORT_NEW</option>
+				<option value="4">PLG_VSIG_SORT_RAND</option>
+			</field>
+	
+
+			<field name="sets" type="bexml" view="sets" label="" description="" />
+			<field name="sets_use" type="text" default="" size="15" label="PLG_VSIG_USESETS" description="PLG_VSIG_USESETS_DESC" />
+			<field name="sets_txt" type="text" default="Set" size="15" label="PLG_VSIG_SETLABEL" description="PLG_VSIG_SETLABEL_DESC" />
+			<field name="ctrl_fwd" type="text" default="" size="15" label="PLG_VSIG_BFORW" description="PLG_VSIG_BFORW_DESC" filter="raw"/>
+			<field name="ctrl_back" type="text" default="" size="15" label="PLG_VSIG_BBACK" description="PLG_VSIG_BBACK_DESC" filter="raw"/>
+
+
+			<field name="captions" type="bexml" view="captions" label="" description="" />
+			<field name="cap_show" type="radio" default="1" label="PLG_VSIG_SHOWCAP" description="PLG_VSIG_SHOWCAP_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="cap_pos" type="radio" default="1" label="PLG_VSIG_CAPPOS" description="PLG_VSIG_CAPPOS_DESC">
+				<option value="1">PLG_VSIG_CAPPOS_INSIDE</option>
+				<option value="0">PLG_VSIG_CAPPOS_BELOW</option>
+			</field>
+	
+
+			<field name="links" type="bexml" view="links" label="" description="" />
+			<field name="link_use" type="radio" default="1" label="PLG_VSIG_USELINKS" description="PLG_VSIG_USELINKS_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="link_orig" type="radio" default="0" label="PLG_VSIG_LINKORIG" description="PLG_VSIG_LINKORIG_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+	
+
+			<field name="others" type="bexml" view="others" label="" description="" />
+			<field name="imagepath" type="text" default="/images/" size="50" label="PLG_VSIG_IMGROOT" description="PLG_VSIG_IMGROOT_DESC" />
+			<field name="buttonpath" type="text" default="/images/vsig_buttons/" size="50" label="PLG_VSIG_BUTFOLD" description="PLG_VSIG_BUTFOLD_DESC" />
+			<field name="usescript" type="radio" default="1" label="PLG_VSIG_USEJS" description="PLG_VSIG_USEJS_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="th_hover" type="radio" default="0" label="PLG_VSIG_HOVER" description="PLG_VSIG_HOVER_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="preload" type="radio" default="0" label="PLG_VSIG_PRLD" description="PLG_VSIG_PRLD_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="tooltip" type="radio" default="0" label="PLG_VSIG_FILENAME" description="PLG_VSIG_FILENAME_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="setid" type="radio" default="0" label="PLG_VSIG_FOLDID" description="PLG_VSIG_FOLDID_DESC">
+				<option value="1">PLG_VSIG_YES</option>
+				<option value="0">PLG_VSIG_NO</option>
+			</field>
+			<field name="gd" type="bexml" view="gd" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

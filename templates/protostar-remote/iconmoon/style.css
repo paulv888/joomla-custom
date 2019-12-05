@@ -1,0 +1,258 @@
+@font-face {
+	font-family: 'iconmoon';
+	src:url('fonts/iconmoon.eot?th10no');
+	src:url('fonts/iconmoon.eot?th10no#iefix') format('embedded-opentype'),
+		url('fonts/iconmoon.ttf?th10no') format('truetype'),
+		url('fonts/iconmoon.woff?th10no') format('woff'),
+		url('fonts/iconmoon.svg?th10no#iconmoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="iconmoon-"], [class*=" iconmoon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'iconmoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconmoon-communication:before {
+	content: "\e90b";
+}
+.iconmoon-chicken:before {
+	content: "\e90c";
+}
+.iconmoon-audio-down:before {
+	content: "\e900";
+}
+.iconmoon-audio-up2:before {
+	content: "\e902";
+}
+.iconmoon-audio-up1:before {
+	content: "\e903";
+}
+.iconmoon-autio-mute1:before {
+	content: "\e904";
+}
+.iconmoon-blueray:before {
+	content: "\e905";
+}
+.iconmoon-audio-down2:before {
+	content: "\e906";
+}
+.iconmoon-audio-mute2:before {
+	content: "\e907";
+}
+.iconmoon-projector-screen:before {
+	content: "\e908";
+}
+.iconmoon-television:before {
+	content: "\e909";
+}
+.iconmoon-projector:before {
+	content: "\e90a";
+}
+.iconmoon-airplane:before {
+	content: "\e61a";
+}
+.iconmoon-cog3:before {
+	content: "\e689";
+}
+.iconmoon-alarm:before {
+	content: "\e68e";
+}
+.iconmoon-home:before {
+	content: "\e68f";
+}
+.iconmoon-audio-select:before {
+	content: "\e901";
+}
+.iconmoon-deck:before {
+	content: "\e614";
+}
+.iconmoon-sofa:before {
+	content: "\e60f";
+}
+.iconmoon-open:before {
+	content: "\e6cb";
+}
+.iconmoon-fire:before {
+	content: "\e6cc";
+}
+.iconmoon-night:before {
+	content: "\e6c8";
+}
+.iconmoon-boy-girl:before {
+	content: "\e6a9";
+}
+.iconmoon-network:before {
+	content: "\e6a7";
+}
+.iconmoon-switch1:before {
+	content: "\e6a8";
+}
+.iconmoon-php1:before {
+	content: "\e67e";
+}
+.iconmoon-fire1:before {
+	content: "\e682";
+}
+.iconmoon-ascendant1:before {
+	content: "\e690";
+}
+.iconmoon-fan1:before {
+	content: "\53";
+}
+.iconmoon-no-power:before {
+	content: "\64";
+}
+.iconmoon-power:before {
+	content: "\e6ca";
+}
+.iconmoon-lightbulb:before {
+	content: "\e679";
+}
+.iconmoon-powercord:before {
+	content: "\e601";
+}
+.iconmoon-enter:before {
+	content: "\e602";
+}
+.iconmoon-exit:before {
+	content: "\e603";
+}
+.iconmoon-snowflake:before {
+	content: "\e635";
+}
+.iconmoon-temperature:before {
+	content: "\54";
+}
+.iconmoon-water:before {
+	content: "\e66c";
+}
+.iconmoon-arrow-up-right2:before {
+	content: "\e63f";
+}
+.iconmoon-arrow-right2:before {
+	content: "\e640";
+}
+.iconmoon-arrow-down-right2:before {
+	content: "\e641";
+}
+.iconmoon-none:before {
+	content: "\e671";
+}
+.iconmoon-bird:before {
+	content: "\e61c";
+}
+.iconmoon-wifi:before {
+	content: "\e631";
+}
+.iconmoon-camera:before {
+	content: "\e669";
+}
+.iconmoon-server1:before {
+	content: "\e60e";
+}
+.iconmoon-roof:before {
+	content: "\e605";
+}
+.iconmoon-weather1:before {
+	content: "\e600";
+}
+.iconmoon-washing1:before {
+	content: "\e604";
+}
+.iconmoon-table1:before {
+	content: "\e606";
+}
+.iconmoon-sun1:before {
+	content: "\e607";
+}
+.iconmoon-shower1:before {
+	content: "\e608";
+}
+.iconmoon-question1:before {
+	content: "\e609";
+}
+.iconmoon-projector1:before {
+	content: "\e60a";
+}
+.iconmoon-plate1:before {
+	content: "\e60b";
+}
+.iconmoon-open1:before {
+	content: "\e60c";
+}
+.iconmoon-open2:before {
+	content: "\e60d";
+}
+.iconmoon-pot:before {
+	content: "\e610";
+}
+.iconmoon-home2:before {
+	content: "\e611";
+}
+.iconmoon-enter1:before {
+	content: "\e612";
+}
+.iconmoon-electric1:before {
+	content: "\e613";
+}
+.iconmoon-door2:before {
+	content: "\e615";
+}
+.iconmoon-car1:before {
+	content: "\e616";
+}
+.iconmoon-car2:before {
+	content: "\e617";
+}
+.iconmoon-bed1:before {
+	content: "\e618";
+}
+.iconmoon-bath1:before {
+	content: "\e619";
+}
+.iconmoon-wifi2:before {
+	content: "\e6ad";
+}
+.iconmoon-param:before {
+	content: "\e61b";
+}
+.iconmoon-display:before {
+	content: "\e696";
+}
+.iconmoon-program:before {
+	content: "\e699";
+}
+.iconmoon-not:before {
+	content: "\e6a6";
+}
+.iconmoon-world:before {
+	content: "\e6ac";
+}
+.iconmoon-sound3:before {
+	content: "\e6c5";
+}
+.iconmoon-infrared:before {
+	content: "\55";
+}
+.iconmoon-progr2:before {
+	content: "\e6bd";
+}
+.iconmoon-alert2:before {
+	content: "\e6be";
+}
+.iconmoon-alarm5:before {
+	content: "\e6c0";
+}
+
