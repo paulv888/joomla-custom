@@ -9,7 +9,7 @@
 	margin-left: 15px;
 }
 .fabrik_actions .btn-group .btn  span {
-	display: none;
+	//display: none;
 }
 .table tbody tr.info > td {
 	background-color: @color3;
@@ -21,10 +21,10 @@
 	width: 95%;
 }
 // Eventlog message
-.fb_el_ha_events___result_ro.span12 .fabrikLabel {
+.fb_el_ha_events___result_ro.span12 .fabrikLabel, .fb_el_vd_queue___result_ro.span12 .fabrikLabel {
 	display: none;
 }
-div.row-striped div.fb_el_ha_events___result_ro div {
+div.row-striped div.fb_el_ha_events___result_ro div, div.row-striped div.fb_el_vd_queue___result_ro div {
 	width: 100%;
 }
 
@@ -62,6 +62,7 @@ div.row-striped div.fb_el_ha_events___result_ro div {
         .pull-right;
         font-size: 0.75em;
         position: relative;
+	width: 100%;
         top: -20px;
 }
 
@@ -72,6 +73,7 @@ div.row-striped div.fb_el_ha_events___result_ro div {
 	margin: 0px !important;
 	/* padding: 10px 0px; */
 	overflow-x: auto;
+	overflow: visible;
 }
 #lastupdate{ 
 	text-align: center;	
@@ -150,10 +152,6 @@ div.row-fluid div.span6 {
 textarea.fabrikinput {
     width: 98%;
 }
-// hover tables
-.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
-	background-color: @color4;
-}
 // Join Descripton after field
 .dbjoin-description {
 	display: inline-block;
@@ -200,7 +198,7 @@ div.modal {
     max-width: 800px;
 }
 .xbmc_video_art___url  img {
-	width: 150px;
+	width: auto;
 }
 .fabrikLabel {
     color: #ccc;
@@ -214,9 +212,9 @@ div.modal {
 #list_167_com_fabrik_167 .table-condensed th, .table-condensed td {
     vertical-align: top;
 }
-#list_167_com_fabrik_167 thead tr .heading div.btn-group, #list_167_com_fabrik_167  .fabrik_groupdata tr .fabrik_element div.btn-group {
+#list_312_com_fabrik_312 thead tr .heading div.btn-group, #list_312_com_fabrik_312  .fabrik_groupdata tr .fabrik_element div.btn-group {
 	white-space: normal;
-	width: 120px;
+	width: 240px;
 }
 @media print {  
     a[href]:after { content: none !important; }  
